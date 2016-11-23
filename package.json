@@ -1,0 +1,40 @@
+{
+  "name": "pathner-scheme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "find './src' -name '*.js' | xargs ./node_modules/.bin/eslint",
+    "build": "./node_modules/.bin/webpack",
+    "build:prod": "./node_modules/.bin/webpack -p",
+    "watch": "npm run build -- --watch --watch-poll",
+    "test": "find ./src -name '*.spec.js' | xargs ./node_modules/mocha/bin/mocha ./support/.setup.js --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semarketir/pathner-scheme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/semarketir/pathner-scheme/issues"
+  },
+  "homepage": "https://github.com/semarketir/pathner-scheme#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "eslint": "^3.10.2",
+    "expect": "^1.20.2",
+    "jsdom": "^9.8.3",
+    "mocha": "^3.1.2",
+    "webpack": "^1.13.3"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "lodash": "^4.17.2"
+  }
+}
